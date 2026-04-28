@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-champagne: #C9A96E;
+  --color-champagne-dark: #8B6914;
+  --color-champagne-light: #F5ECD7;
+  --color-estetica-dark: #2C2318;
+  --color-estetica-mid: #5C4A32;
+  --color-estetica-light: #8B7355;
+  --color-cream: #FAF7F2;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400&display=swap');
+
+/* Configurações Globais */
+body {
+  background-color: var(--color-cream);
+  color: var(--color-estetica-dark);
+  font-family: 'Jost', sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.serif {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Se quiser usar o @apply sem erro visual no VS Code, ele precisa estar dentro de uma @layer */
+@layer components {
+  .btn-gold {
+    @apply bg-champagne text-white px-6 py-2 uppercase tracking-widest text-xs transition-all hover:bg-champagne-dark;
+  }
+}
